@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  master:
+    container_name: master
+    image: edbighead/ansible-master
+    stdin_open: true
+    tty: true
+    volumes:
+    - ./ansible:/home/ansible
+  node-1:
+    container_name: node-1
+    image: edbighead/ansible-node
+    stdin_open: true
+    tty: true
+  node-2:
+    container_name: node-2
+    image: edbighead/ansible-node
+    stdin_open: true
+    tty: true

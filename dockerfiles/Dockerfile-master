@@ -1,0 +1,4 @@
+FROM alpine:latest
+WORKDIR /home/ansible
+RUN apk add ansible openssh curl --no-cache
+ENV ANSIBLE_HOST_KEY_CHECKING=False
